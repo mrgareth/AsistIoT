@@ -1,3 +1,4 @@
+import 'package:asistiot/views/history.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -108,6 +109,14 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            ElevatedButton(
+              onPressed: () { Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => History()),
+              );
+              },
+            child: const Text('Ir al Historial'),
             ),
           ],
         ),
